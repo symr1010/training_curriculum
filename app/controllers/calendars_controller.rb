@@ -28,7 +28,7 @@ class CalendarsController < ApplicationController
     @week_days = []
 
     plans = Plan.where(date: @todays_date..@todays_date + 6)
-
+    # 今日と今日から6日目までの日付を取得
     7.times do |x|
       today_plans = []
       plans.each do |plan|
